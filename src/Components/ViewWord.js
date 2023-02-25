@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
+import { faVolumeHigh, faXmark } from '@fortawesome/free-solid-svg-icons'
 const ViewWord = ({ word }) => {
     return (
         <div className="viewWord">
@@ -39,16 +39,23 @@ const ViewWord = ({ word }) => {
                         </>
                     }
                     {meaning.antonyms.length > 0 &&
-                        <ul className="ant_tab">
+                        <>
                             <h5>Antonyms</h5>
-                            {
-                                meaning.antonyms.map((antonym, index) => (
-                                    <p key={index}>{antonym}</p>
-                                ))}
-                        </ul>
+                            <ul className="ant_tab">
+                                {
+                                    meaning.antonyms.map((antonym, index) => (
+                                        <li key={index}>{antonym}</li>
+                                    ))}
+                            </ul>
+                        </>
                     }
                 </>
             ))}
+            <div className="floating_button" >
+                <div className="button iconbutton">
+                    <FontAwesomeIcon icon={faXmark} className="icon"/>
+                </div>
+            </div>
         </div>
     )
 }
