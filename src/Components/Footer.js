@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const Footer = ({ quotes }) => {
   const [index, setIndex] = useState(0);
 
@@ -8,10 +8,10 @@ const Footer = ({ quotes }) => {
     console.log(indexVal);
     setIndex(indexVal);
   }
-  getRandomIndex();
-  // useEffect(() => {
-    
-  // },[]);
+  useEffect(() => {
+    getRandomIndex();
+    // eslint-disable-next-line
+  },[]);
   
   return (
     <div className="footer">
