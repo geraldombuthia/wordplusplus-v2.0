@@ -14,7 +14,6 @@ const Search = ({onSearch}) => {
         if(searchWord){
             onSearch(searchWord)
         }
-        setSearchWord("");
     }
   return (
     <form onSubmit = {onSubmit} action="" className="form">

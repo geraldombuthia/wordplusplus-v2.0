@@ -11,7 +11,7 @@ const ViewWord = ({ word }) => {
                         <FontAwesomeIcon icon={faVolumeHigh} />
                     </button>
                 </div>
-                <p className="phonetic">{word[0].phonetic}</p>
+                <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
             </div>
             {/* <div classname="def-syn-ant">
                 <p className='lorem'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae, sunt tenetur atque, in repellendus explicabo, natus vel pariatur non consequuntur illum quaerat adipisci eligendi repudiandae aliquam. Quis, explicabo maiores.</p>
@@ -30,11 +30,13 @@ const ViewWord = ({ word }) => {
                         </div>
                     }
                     {meaning.synonyms.length > 0 &&
-                        <ul className="syn_tab">
+                        <>
                             <h5>Synonyms</h5>
-                            {
-                                meaning.synonyms.map((synonym, index) => <p key={index}>{synonym}</p>)}
-                        </ul>
+                            <ul className="syn_tab">
+                                {
+                                    meaning.synonyms.map((synonym, index) => <li key={index}>{synonym}</li>)}
+                            </ul>
+                        </>
                     }
                     {meaning.antonyms.length > 0 &&
                         <ul className="ant_tab">
