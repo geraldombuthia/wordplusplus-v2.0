@@ -8,9 +8,10 @@ const Footer = ({ quotes }) => {
     console.log(indexVal);
     setIndex(indexVal);
   }
-  useEffect(() => {
-    getRandomIndex();
-  },[]);
+  getRandomIndex();
+  // useEffect(() => {
+    
+  // },[]);
   
   return (
     <div className="footer">
