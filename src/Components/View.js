@@ -1,6 +1,7 @@
 import React from "react";
 import ViewWord from "./ViewWord";
 import GirlPic from "../images/Girl Reading.webp"
+
 const View = ({ word, closeView }) => {
   return (
     <div className="view">
@@ -9,7 +10,7 @@ const View = ({ word, closeView }) => {
       ) : 
       <div className="no-word">
         <p className="helper-text">Find new words, synonyms and antonyms</p>
-        <img src={GirlPic} alt="Girl reading a book" width="200px"/>
+        <img src={GirlPic} alt="Girl reading a book" className="girlpic"/>
       </div>}
     </div>
   );
