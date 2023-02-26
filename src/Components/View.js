@@ -1,5 +1,6 @@
 import React from "react";
 import ViewWord from "./ViewWord";
+import LazyLoad from 'react-lazyload';
 import GirlPic from "../images/Girl Reading.webp"
 
 const View = ({ word, closeView }) => {
@@ -10,7 +11,9 @@ const View = ({ word, closeView }) => {
       ) : 
       <div className="no-word">
         <p className="helper-text">Find new words, synonyms and antonyms</p>
-        <img src={GirlPic} alt="Girl reading a book" className="girlpic"/>
+        <LazyLoad height={200}>
+          <img src={GirlPic} alt="Girl reading a book" className="girlpic"/>
+        </LazyLoad>
       </div>}
     </div>
   );
