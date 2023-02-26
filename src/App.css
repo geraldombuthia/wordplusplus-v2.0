@@ -120,6 +120,9 @@ button {
 .definition {
   margin: 0.5em;
 }
+.tab{
+  margin-top: 2em;
+}
 .syn_tab,
 .ant_tab {
   display: flex;
@@ -129,7 +132,8 @@ button {
 }
 .syn_tab > li,
 .ant_tab > li {
-  margin: 1em;
+  margin:0.5em;
+  width: auto;
 }
 .floating_button {
   position: fixed;

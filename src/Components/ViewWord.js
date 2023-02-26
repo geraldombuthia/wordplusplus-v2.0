@@ -27,33 +27,33 @@ const ViewWord = ({ word, closeView }) => {
                             {meaning.definitions.map((definition, ind) => (
                                 <p key={ind} className="definition"><span>{ind + 1}. </span>{definition.definition}</p>
                             ))}
+                            {meaning.synonyms.length > 0 &&
+                                <div className="tab">
+                                    <h5>Synonyms</h5>
+                                    <ul className="syn_tab">
+                                        {
+                                            meaning.synonyms.map((synonym, index) => <li key={index}>{synonym}</li>)}
+                                    </ul>
+                                </div>
+                            }
+                            {meaning.antonyms.length > 0 &&
+                                <div className='tab'>
+                                    <h5>Antonyms</h5>
+                                    <ul className="ant_tab">
+                                        {
+                                            meaning.antonyms.map((antonym, index) => (
+                                                <li key={index}>{antonym}</li>
+                                            ))}
+                                    </ul>
+                                </div>
+                            }
                         </div>
-                    }
-                    {meaning.synonyms.length > 0 &&
-                        <>
-                            <h5>Synonyms</h5>
-                            <ul className="syn_tab">
-                                {
-                                    meaning.synonyms.map((synonym, index) => <li key={index}>{synonym}</li>)}
-                            </ul>
-                        </>
-                    }
-                    {meaning.antonyms.length > 0 &&
-                        <>
-                            <h5>Antonyms</h5>
-                            <ul className="ant_tab">
-                                {
-                                    meaning.antonyms.map((antonym, index) => (
-                                        <li key={index}>{antonym}</li>
-                                    ))}
-                            </ul>
-                        </>
                     }
                 </>
             ))}
             <div className="floating_button" >
                 <div className="button iconbutton">
-                    <FontAwesomeIcon icon={faXmark} className="icon" onClick={closeView}/>
+                    <FontAwesomeIcon icon={faXmark} className="icon" onClick={closeView} />
                 </div>
             </div>
         </div>
