@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-const Footer = ({ quotes }) => {
+const Footer = ({ quotes, showQuotes }) => {
   const [index, setIndex] = useState(0);
 
   const getRandomIndex = () => {
@@ -15,7 +15,7 @@ const Footer = ({ quotes }) => {
   
   return (
     <div className="footer">
-      {quotes && (
+      {quotes && showQuotes &&(
         <div key={index} onClick={() => getRandomIndex()}>
           <p className="text">{quotes[index].text}</p>
           <p className="author">~{quotes[index].author}</p>

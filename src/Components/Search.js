@@ -3,8 +3,9 @@ import {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const Search = ({onSearch}) => {
+const Search = ({onSearch, showQuotes}) => {
     const [searchWord, setSearchWord] = useState('');
+
     const onSubmit = (e) => {
         e.preventDefault();
         if(!searchWord){
@@ -15,6 +16,9 @@ const Search = ({onSearch}) => {
             onSearch(searchWord)
         }
     }
+    showQuotes && (
+        setSearchWord("")
+    )
   return (
     <form onSubmit = {onSubmit} action="" className="form">
         <input type="text" placeholder="Search" className='input' value={searchWord} onChange={(e) => setSearchWord(e.target.value)}/>

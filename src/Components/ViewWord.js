@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVolumeHigh, faXmark } from '@fortawesome/free-solid-svg-icons'
-const ViewWord = ({ word }) => {
+const ViewWord = ({ word, closeView }) => {
     return (
         <div className="viewWord">
             <div className="word-header">
@@ -53,7 +53,7 @@ const ViewWord = ({ word }) => {
             ))}
             <div className="floating_button" >
                 <div className="button iconbutton">
-                    <FontAwesomeIcon icon={faXmark} className="icon"/>
+                    <FontAwesomeIcon icon={faXmark} className="icon" onClick={closeView}/>
                 </div>
             </div>
         </div>

@@ -7,9 +7,11 @@ import View from "./Components/View"
 function App() {
   const [word, setWord] = useState('');
   const [quotes, setQuotes] = useState('');
+  const [showQuotes, setShowQuotes] = useState(true);
 
   const onSearch = async (toSearch) => {
     fetchWord(toSearch);
+    setShowQuotes(false);
   }
   useEffect(() => {
     //FetchQuotes function
@@ -31,13 +33,18 @@ function App() {
     }
     setWord(data);
   }
+
+  const closeView = () => {
+    setWord("");
+    setShowQuotes(true);
+  }
   //FetchWord Function Ends
   return (
     <div className="App">
       <Navbar />
-      <Search onSearch={onSearch} />
-      <View word={word} />
-      <Footer quotes={quotes} />
+      <Search onSearch={onSearch} showQuotes = {showQuotes}/>
+      <View word={word} closeView = {closeView} />
+      <Footer quotes={quotes} showQuotes = { showQuotes }/>
     </div>
   );
 }
