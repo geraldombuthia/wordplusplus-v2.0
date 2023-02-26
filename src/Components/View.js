@@ -1,6 +1,6 @@
 import React from "react";
 import ViewWord from "./ViewWord";
-import GirlPic from "../images/Girl Reading.jpg"
+import GirlPic from "../images/Girl Reading.webp"
 const View = ({ word, closeView }) => {
   return (
     <div className="view">
