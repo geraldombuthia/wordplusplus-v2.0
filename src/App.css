@@ -137,16 +137,20 @@ button {
 }
 .floating_button {
   position: fixed;
+  display: flex;
+  justify-content: center;
   bottom: 30px;
-  right: 20px;
+  right: 1.1em;
   cursor: pointer;
   font-size: 2em;
+  background: white;
 }
 .iconbutton {
   width: 30px;
   height: 30px;
   border-radius: 100%;
   box-shadow: 10px 10px 5px #aaaaaa;
+  font-weight: light;
 }
 .button {
   width: 50px;
