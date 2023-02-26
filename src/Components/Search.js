@@ -16,9 +16,6 @@ const Search = ({onSearch, showQuotes}) => {
             onSearch(searchWord)
         }
     }
-    showQuotes && (
-        setSearchWord("")
-    )
   return (
     <form onSubmit = {onSubmit} action="" className="form">
         <input type="text" placeholder="Search" className='input' value={searchWord} onChange={(e) => setSearchWord(e.target.value)}/>
