@@ -7,5 +7,7 @@ const Share = (word) => {
     shareTag.click();
     console.log("clicked");
 }
-
+// There is a Web Share API available to allow for native access
+// to share to various different Apps available on mobile or desktop
+// has a 90% reach.
 export default Share
