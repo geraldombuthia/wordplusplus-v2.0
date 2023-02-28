@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Word++ v2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an upgraded version of the first iteration of the Word++.
+Uses a Public API to find words that 
 
 ## Available Scripts
 
