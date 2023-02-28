@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeHigh, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import Speak from "../Controllers/Speak"
+import Share from "../Controllers/Share"
 
 const ViewWord = ({ word, closeView }) => {
     return (
@@ -16,8 +17,10 @@ const ViewWord = ({ word, closeView }) => {
                 </div>
                 <div className="second-header-line">
                     <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
-                    <button type="submit">
+                    <button type="submit" onClick={() => Share()}>
+                    <a href="whatsapp://send?text=Testing Whatsapp Share!" data-action="share/whatsapp/share">
                         <FontAwesomeIcon icon={ faShareNodes } />
+                    </a>
                     </button>
                 </div>
             </div>
