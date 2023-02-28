@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Share = () => {
-    <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share">Share via Whatsapp</a>
+    let shareTag = document.createElement("a")
+    shareTag.setAttribute("href", "whatsapp://send?text=Testing Whatsapp Share!");
+    shareTag.setAttribute("data-action", "share/whatsapp/share");
+    shareTag.click();
+    console.log("clicked");
 }
 
 export default Share

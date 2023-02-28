@@ -18,9 +18,7 @@ const ViewWord = ({ word, closeView }) => {
                 <div className="second-header-line">
                     <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
                     <button type="submit" onClick={() => Share()}>
-                    <a href="whatsapp://send?text=Testing Whatsapp Share!" data-action="share/whatsapp/share">
                         <FontAwesomeIcon icon={ faShareNodes } />
-                    </a>
                     </button>
                 </div>
             </div>
