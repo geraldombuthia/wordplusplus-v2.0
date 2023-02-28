@@ -1,9 +1,10 @@
 const Share = (word) => {
     let shareTag = document.createElement("a")
-    shareTag.setAttribute("href", `whatsapp://send?text=*Word of the day!*&#13${word}&#13View more on: https://wordplusplus.netlify.app`);
+    let text = `*Word of the day!*\n\n${word}\nView more on: https://wordplusplus.netlify.app`
+    shareTag.setAttribute("href", `whatsapp://send?text=${text}`);
     shareTag.setAttribute("data-action", "share/whatsapp/share");
     shareTag.click();
-    console.log(shareTag);
+    console.log(encodeURIComponent(text));
 }
 // There is a Web Share API available to allow for native access
 // to share to various different Apps available on mobile or desktop
