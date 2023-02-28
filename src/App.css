@@ -96,13 +96,17 @@ button {
   margin-bottom: 1em;
   border-radius: var(--border-radius);
 }
-.word-head-button {
+.word-head, .second-header-line {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.word-head-button > h2 {
+.word-head > h2 {
   margin: 0.5em 0;
+}
+.second-header-line > button{
+  font-size: 1.6em;
+  margin-right: 0.3em;
 }
 .phonetic {
   font-weight: light;

@@ -1,17 +1,25 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faVolumeHigh, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVolumeHigh, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import Speak from "../Controllers/Speak"
+
 const ViewWord = ({ word, closeView }) => {
     return (
         <div className="viewWord">
             <div className="word-header">
-                <div className="word-head-button">
+                <div className="word-head">
                     <h2>{word[0].word[0].toUpperCase() + word[0].word.slice(1, word[0].word.length)}</h2>
-                    <button type="submit">
+                    <button type="submit" onClick={() => Speak(word[0].word)}>
                         <FontAwesomeIcon icon={faVolumeHigh} />
                     </button>
                 </div>
-                <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
+                <div className="second-header-line">
+                    <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
+                    <button type="submit">
+                        <FontAwesomeIcon icon={ faShareNodes } />
+                    </button>
+                </div>
             </div>
             {/* <div classname="def-syn-ant">
                 <p className='lorem'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae, sunt tenetur atque, in repellendus explicabo, natus vel pariatur non consequuntur illum quaerat adipisci eligendi repudiandae aliquam. Quis, explicabo maiores.</p>
@@ -59,5 +67,4 @@ const ViewWord = ({ word, closeView }) => {
         </div>
     )
 }
-
 export default ViewWord
