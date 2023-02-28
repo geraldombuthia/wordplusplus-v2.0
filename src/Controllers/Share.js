@@ -1,6 +1,6 @@
 const Share = (word) => {
     let shareTag = document.createElement("a")
-    let text = `*Word of the day!*\n\n${word}\nView more on: https://wordplusplus.netlify.app`
+    let text = `*Word of the day!* \n\n${word} \nView more on: https://wordplusplus.netlify.app`
     shareTag.setAttribute("href", `whatsapp://send?text=${text}`);
     shareTag.setAttribute("data-action", "share/whatsapp/share");
     shareTag.click();
