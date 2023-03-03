@@ -1,71 +1,38 @@
 # Word++ v2.0
 
 This is an upgraded version of the first iteration of the Word++.
-Uses a Public API to find words that 
+Uses a Public API to find words, provide their definitions, synonyms, antonyms, pronounciatons etc.
 
-## Available Scripts
+## Objectives
 
-In the project directory, you can run:
+* Teach new vocabularies using ** Word of the day ** type of feature.
+* Provide a means to find definitions of words
+* Provide a means to hear pronunciations of words.
+* Generate random quotes froma free API.
+* Provide a bookmarking interfacing for viewing later
+* Provide a sharing tool to other social media  apps such as Whatsapp, Facebook, Twitter,   etc.
+* Provide a local storage mechanism for bookmarked books.
+* Develop an application that passes the lighthouse tests especially in performance. ...
+***
+*Future Objectives once the above are met. This will be more of a backend integrative process*
+* Provide a synonym and antonyms game to play
+* introduce user registration and login to play
+* Introduce an online score board.
+* Introduce an online voice chat to allow socializing.
 
-### `npm start`
+## Personal Motivation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project will serve the purpose of allowing me to practise working with React and gain an in-depth understanding of what it takes to build fast, stable and optimixed React applications. A grasp of the fundamentals of UI/UX will also be earned.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Architecture and State management
 
-### `npm test`
+The above named functionalities will require a better state management  other than *usestate*(). *Redux* will  be made use of at a later stage when most of the functionality has been achieved. Currently however, the simple state management provided by React will suffice.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Third Party APIs and content
 
-### `npm run build`
+The development of this project relies heavily on the following third party APIs.
+*[Free Dictionary API](https://dictionaryapi.dev)
+*[Free Quotes API](https://type.fit/api/quotes)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Targeted End User
+This app is targetted for curious individuals with a desire to improve their vocabulary.
