@@ -20,7 +20,7 @@ const ViewWord = ({ word, closeView }) => {
                 <div className="second-header-line">
                     <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
                     <button type="submit" onClick={() => Share(word[0].word)}>
-                        <FontAwesomeIcon icon={ faWhatsapp } />
+                        <FontAwesomeIcon icon={ faWhatsapp } className="word-head-icon"/>
                     </button>
                 </div>
             </div>
