@@ -5,6 +5,7 @@ import { faXmarkCircle, faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Speak from "../Controllers/Speak"
 import Share from "../Controllers/Share"
+import Bookmark from '../Controllers/Bookmark';
 
 const ViewWord = ({ word, closeView }) => {
     return (
@@ -12,9 +13,9 @@ const ViewWord = ({ word, closeView }) => {
             <div className="word-header">
                 <div className="word-head">
                     <h2>{word[0].word[0].toUpperCase() + word[0].word.slice(1, word[0].word.length)}</h2>
-                    <button type="submit" onClick={() => Speak(word[0].word)}>
-                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark}/>
-                        <FontAwesomeIcon className="word-head-icon" icon={faVolumeHigh} />
+                    <button type="submit" >
+                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark} onClick={()=> Bookmark(word[0].word)}/>
+                        <FontAwesomeIcon className="word-head-icon" icon={faVolumeHigh} onClick={() => Speak(word[0].word)}/>
                     </button>
                 </div>
                 <div className="second-header-line">
