@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVolumeHigh, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeHigh} from '@fortawesome/free-solid-svg-icons';
+import { faXmarkCircle, faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Speak from "../Controllers/Speak"
 import Share from "../Controllers/Share"
@@ -12,7 +13,8 @@ const ViewWord = ({ word, closeView }) => {
                 <div className="word-head">
                     <h2>{word[0].word[0].toUpperCase() + word[0].word.slice(1, word[0].word.length)}</h2>
                     <button type="submit" onClick={() => Speak(word[0].word)}>
-                        <FontAwesomeIcon icon={faVolumeHigh} />
+                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark}/>
+                        <FontAwesomeIcon className="word-head-icon" icon={faVolumeHigh} />
                     </button>
                 </div>
                 <div className="second-header-line">
@@ -62,7 +64,7 @@ const ViewWord = ({ word, closeView }) => {
             ))}
             <div className="floating_button" >
                 <div className="button iconbutton">
-                    <FontAwesomeIcon icon={faXmark} className="icon" onClick={closeView} />
+                    <FontAwesomeIcon icon={faXmarkCircle} className="icon" onClick={closeView} />
                 </div>
             </div>
         </div>

@@ -29,12 +29,13 @@
 }
 .nav > h1 {
   font-size: 24px;
+  font-weight: normal;
 }
 .nav-icons{
   display:flex;
   justify-content: center;
   align-items: center;
-  padding: 2px;
+  padding:0 10px;
 }
 .form {
   width: 100%;
@@ -115,6 +116,9 @@ button {
 }
 .word-head > h2 {
   margin: 0.5em 0;
+}
+.word-head-icon{
+  margin: 0 10px;
 }
 .second-header-line > button{
   font-size: 1.6em;
