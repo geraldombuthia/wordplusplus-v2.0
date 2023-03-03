@@ -28,6 +28,8 @@ This project will serve the purpose of allowing me to practise working with Reac
 
 The above named functionalities will require a better state management  other than *usestate*(). *Redux* will  be made use of at a later stage when most of the functionality has been achieved. Currently however, the simple state management provided by React will suffice.
 
+*Separation of concerns* as a principle will be utilised in the development. Modularization will be utilised in the form of components and separate function files. This is in the hope of improving readability and development.
+
 ## Third Party APIs and content
 
 The development of this project relies heavily on the following third party APIs.
@@ -36,3 +38,7 @@ The development of this project relies heavily on the following third party APIs
 
 ## Targeted End User
 This app is targetted for curious individuals with a desire to improve their vocabulary.
+
+## Dates
+**Start Date** - 31 January 2023
+**End Date**   - Under Active development
