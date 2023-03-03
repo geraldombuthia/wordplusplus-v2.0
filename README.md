@@ -1,11 +1,11 @@
 # Word++ v2.0
 
-This is an upgraded version of the first iteration of the Word++.
+This is an upgraded version of the first iteration of the Word++ Application.
 Uses a Public API to find words, provide their definitions, synonyms, antonyms, pronounciatons etc.
 
 ## Objectives
 
-* Teach new vocabularies using ** Word of the day ** type of feature.
+* Teach new vocabularies using **Word of the day** type of feature.
 * Provide a means to find definitions of words
 * Provide a means to hear pronunciations of words.
 * Generate random quotes froma free API.
@@ -33,8 +33,8 @@ The above named functionalities will require a better state management  other th
 ## Third Party APIs and content
 
 The development of this project relies heavily on the following third party APIs.
-*[Free Dictionary API](https://dictionaryapi.dev)
-*[Free Quotes API](https://type.fit/api/quotes)
+* [Free Dictionary API](https://dictionaryapi.dev)
+* [Free Quotes API](https://type.fit/api/quotes)
 
 ## Targeted End User
 This app is targetted for curious individuals with a desire to improve their vocabulary.
