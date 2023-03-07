@@ -7,7 +7,7 @@ import View from "./View"
 const Home = ({onSearch, showQuotes, word, closeView, quotes}) => {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar text={"Search"}/>
       <Search onSearch={onSearch} showQuotes = {showQuotes}/>
       <View word={word} closeView = {closeView} />
       <Footer quotes={quotes} showQuotes = { showQuotes }/>

@@ -12,7 +12,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 12px;
 }
 .App {
   display: flex;
@@ -185,6 +184,11 @@ button {
   justify-content:center;
   height: 100%;
   color:black;
+  }
+  .bookmark-item{
+    margin: 0.5em 0;
+    padding: 1em 1em;
+    border: 1px solid grey;
   }
   @media only screen and (max-width: 600px){
     .word-head-icon{

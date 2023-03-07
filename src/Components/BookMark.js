@@ -1,6 +1,13 @@
+import React from "react"
+import BookMarkContents from "./BookMarkContents"
+import Navbar from "./Navbar"
+
 const BookMark = () => {
   return (
-    <div>BookMark</div>
+    <div className="App">
+        <Navbar text = {"Bookmark"}/>
+        <BookMarkContents />
+    </div>
   )
 }
 

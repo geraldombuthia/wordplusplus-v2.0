@@ -35,6 +35,7 @@ The above named functionalities will require a better state management  other th
 The development of this project relies heavily on the following third party APIs. ...
 * [Free Dictionary API](https://dictionaryapi.dev)
 * [Free Quotes API](https://type.fit/api/quotes)
+* [FreePik Vectors and Stock Photos](https://www.freepik.com)
 
 ## Targeted End User
 This app is targetted for curious individuals with a desire to improve their vocabulary.
