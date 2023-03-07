@@ -3,7 +3,9 @@ import ViewWord from "./ViewWord";
 import LazyLoad from 'react-lazyload';
 import GirlPic from "../images/Girl Reading.webp"
 import LoadingSpinner from "./LoadingSpinner";
-const View = ({ word, closeView, isLoading }) => {
+import SearchErrorPage from "./SearchErrorPage";
+
+const View = ({ word, closeView, isLoading, isError }) => {
   return (
     
     <div className="view">
@@ -11,6 +13,7 @@ const View = ({ word, closeView, isLoading }) => {
       {word.length > 0 && !isLoading && (
         <ViewWord word={word} closeView = {closeView} />
       ) }
+      {isError && <SearchErrorPage/>}
       {!isLoading && word.length <= 0  &&    
       <div className="no-word">
         <p className="helper-text">Find new words, synonyms and antonyms</p>
