@@ -1,9 +1,9 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Navbar from "./Components/Navbar"
-import Search from "./Components/Search"
-import Footer from "./Components/Footer"
-import View from "./Components/View"
+import Home from "./Components/Home"
+import Bookmark from "./Components/BookMark"
+
+import { Route, Routes } from "react-router-dom";
 function App() {
   const [word, setWord] = useState('');
   const [quotes, setQuotes] = useState('');
@@ -39,14 +39,13 @@ function App() {
     setShowQuotes(true);
   }
   //FetchWord Function Ends
-  return (
-    <div className="App">
-      <Navbar />
-      <Search onSearch={onSearch} showQuotes = {showQuotes}/>
-      <View word={word} closeView = {closeView} />
-      <Footer quotes={quotes} showQuotes = { showQuotes }/>
-    </div>
+  return (  
+    <Routes>
+      <Route path = "/" element={<Home onSearch={onSearch} showQuotes = {showQuotes} word={word} closeView = {closeView} quotes={quotes}/>}/>
+      <Route path = "/Bookmark" element={<Bookmark />}/>
+    </Routes>
   );
 }
 
 export default App;
+

@@ -32,7 +32,7 @@ The above named functionalities will require a better state management  other th
 
 ## Third Party APIs and content
 
-The development of this project relies heavily on the following third party APIs.
+The development of this project relies heavily on the following third party APIs. ...
 * [Free Dictionary API](https://dictionaryapi.dev)
 * [Free Quotes API](https://type.fit/api/quotes)
 
