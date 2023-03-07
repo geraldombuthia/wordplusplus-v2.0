@@ -8,6 +8,7 @@ function App() {
   const [word, setWord] = useState('');
   const [quotes, setQuotes] = useState('');
   const [showQuotes, setShowQuotes] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSearch = async (toSearch) => {
     fetchWord(toSearch);
@@ -26,12 +27,17 @@ function App() {
 
   // FechWord Function starts
   const fetchWord = async (toSearch) => {
-    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${toSearch}`)
+    setIsLoading(true);
+    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${toSearch}`);
     const data = await res.json();
     if (data.length === 0) {
       alert("not present");
     }
     setWord(data);
+    if (data){
+      setIsLoading(false)
+    }
+    
   }
 
   const closeView = () => {
@@ -41,7 +47,7 @@ function App() {
   //FetchWord Function Ends
   return (  
     <Routes>
-      <Route path = "/" element={<Home onSearch={onSearch} showQuotes = {showQuotes} word={word} closeView = {closeView} quotes={quotes}/>}/>
+      <Route path = "/" element={<Home onSearch={onSearch} showQuotes = {showQuotes} word={word} closeView = {closeView} quotes={quotes} isLoading= {isLoading}/>}/>
       <Route path = "/Bookmark" element={<Bookmark />}/>
     </Routes>
   );
