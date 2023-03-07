@@ -7,7 +7,7 @@ const BookMarkContents = () => {
   return (
    <> 
    {keys.map((obj, index) => 
-        <BookMarkItem obj = {obj} index = {index}/> 
+        <BookMarkItem obj = {obj} key = {index}/> 
    )}
    </>
   )

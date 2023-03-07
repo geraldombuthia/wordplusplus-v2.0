@@ -6,15 +6,16 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Speak from "../Controllers/Speak"
 import Share from "../Controllers/Share"
 import Bookmark from '../Controllers/Bookmark';
+import CapitalizeWord from '../Controllers/CapitalizeWord';
 
 const ViewWord = ({ word, closeView }) => {
     return (
         <div className="viewWord">
             <div className="word-header">
                 <div className="word-head">
-                    <h2>{word[0].word[0].toUpperCase() + word[0].word.slice(1, word[0].word.length)}</h2>
+                    <h2>{CapitalizeWord(word[0].word)}</h2>
                     <button type="submit" >
-                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark} onClick={()=> Bookmark(word[0].word)}/>
+                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark} onClick={()=> Bookmark(word)}/>
                         <FontAwesomeIcon className="word-head-icon" icon={faVolumeHigh} onClick={() => Speak(word[0].word)}/>
                     </button>
                 </div>
