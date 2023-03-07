@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVolumeHigh} from '@fortawesome/free-solid-svg-icons';
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import { faXmarkCircle, faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import Speak from "../Controllers/Speak"
@@ -15,14 +15,14 @@ const ViewWord = ({ word, closeView }) => {
                 <div className="word-head">
                     <h2>{CapitalizeWord(word[0].word)}</h2>
                     <button type="submit" >
-                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark} onClick={()=> Bookmark(word)}/>
-                        <FontAwesomeIcon className="word-head-icon" icon={faVolumeHigh} onClick={() => Speak(word[0].word)}/>
+                        <FontAwesomeIcon className="word-head-icon" icon={faVolumeHigh} onClick={() => Speak(word[0].word)} />
                     </button>
                 </div>
                 <div className="second-header-line">
                     <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
                     <button type="submit" onClick={() => Share(word[0].word)}>
-                        <FontAwesomeIcon icon={ faWhatsapp } className="word-head-icon"/>
+                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark} onClick={() => Bookmark(word)} />
+                        <FontAwesomeIcon icon={faWhatsapp} className="word-head-icon" />
                     </button>
                 </div>
             </div>
