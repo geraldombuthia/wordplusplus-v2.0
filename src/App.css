@@ -31,11 +31,25 @@
   font-size: 24px;
   font-weight: normal;
 }
-.nav-icons{
-  display:flex;
+.nav-icons {
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding:0 10px;
+  padding: 0 10px;
+  position: relative;
+}
+.bookmark-icon{
+  font-size: 1.3em;
+}
+.count {
+  position: absolute;
+  top: -5px;
+  right: -3px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  background-color: var(--color1);
+  color: var(--color4);
+  font-size: 0.7em;
 }
 .form {
   width: 100%;
@@ -61,7 +75,7 @@ button {
   color: var(--color5);
   font-size: 1.5em;
 }
-.display{
+.display {
   display: none;
 }
 .view {
@@ -86,7 +100,7 @@ button {
 }
 .girlpic {
   width: 100%;
-  height: auto; 
+  height: auto;
 }
 .footer {
   display: flex;
@@ -109,7 +123,8 @@ button {
   margin-bottom: 1em;
   border-radius: var(--border-radius);
 }
-.word-head, .second-header-line {
+.word-head,
+.second-header-line {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -117,10 +132,10 @@ button {
 .word-head > h2 {
   margin: 0.5em 0;
 }
-.word-head-icon{
+.word-head-icon {
   margin: 0 10px;
 }
-.second-header-line > button{
+.second-header-line > button {
   font-size: 1.6em;
   margin-right: 0.3em;
 }
@@ -140,7 +155,7 @@ button {
 .definition {
   margin: 0.5em;
 }
-.tab{
+.tab {
   margin-top: 2em;
 }
 .syn_tab,
@@ -152,7 +167,7 @@ button {
 }
 .syn_tab > li,
 .ant_tab > li {
-  margin:0.5em;
+  margin: 0.5em;
   width: auto;
 }
 .floating_button {
@@ -175,24 +190,25 @@ button {
 .button {
   width: 50px;
   height: 50px;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
-.icon{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  color:black;
+  color: black;
+}
+.bookmark-item {
+  margin: 0.5em 0;
+  padding: 1em 1em;
+  border: 1px solid grey;
+  border-radius: var(--border-radius);
+}
+
+@media only screen and (max-width: 600px) {
+  .word-head-icon {
+    font-size: 16px;
   }
-  .bookmark-item{
-    margin: 0.5em 0;
-    padding: 1em 1em;
-    border: 1px solid grey;
-    border-radius: var(--border-radius);
-  }
-  @media only screen and (max-width: 600px){
-    .word-head-icon{
-      font-size: 16px;
-    }
-  }
+}
