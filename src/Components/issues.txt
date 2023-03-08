@@ -1,0 +1,13 @@
+Vieword page
+- Appropriately separate bookmark and whatsapp share button
+- Align the above two buttons with the phonetics
+- Ensure number badge on bookmark icon changes as soon as number of bookmarked words changes
+- Add a way to indicate that a word is already bookmarked after Search
+- Find words from bookmark first before fetching
+
+*To be added*
+Have a history feed
+Fix the SearchError Page Appropriately
+Add an Offline Page and Make the application downloadable.
+Introduce a service worker - Ideally to fetch quotes and supply a switch in the background.
+Improve platform performance by comparing it with the lighthouse metrics.
