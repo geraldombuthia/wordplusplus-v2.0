@@ -2,12 +2,10 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-regular-svg-icons'
 import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import BookMarkCount from '../Controllers/BookMarkCount'
 
 const Navbar = ({ text }) => {
-  const [count, setCount ] = useState(0);
   
   const navigate = useNavigate();
   return (
