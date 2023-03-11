@@ -5,13 +5,13 @@ import GirlPic from "../images/Girl Reading.webp"
 import LoadingSpinner from "./LoadingSpinner";
 import SearchErrorPage from "./SearchErrorPage";
 
-const View = ({ word, closeView, isLoading, isError }) => {
+const View = ({ word, closeView, isLoading, isError, BookMarkCountRefresh }) => {
   return (
     
     <div className="view">
       {isLoading && <LoadingSpinner />}
       {word.length > 0 && !isLoading && (
-        <ViewWord word={word} closeView = {closeView} />
+        <ViewWord word={word} closeView = {closeView} BookMarkCountRefresh = {BookMarkCountRefresh}/>
       ) }
       {isError && <SearchErrorPage/>}
       {!isLoading && word.length <= 0  &&    

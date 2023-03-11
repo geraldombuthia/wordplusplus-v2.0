@@ -8,7 +8,11 @@ import Share from "../Controllers/Share"
 import Bookmark from '../Controllers/Bookmark';
 import CapitalizeWord from '../Controllers/CapitalizeWord';
 
-const ViewWord = ({ word, closeView }) => {
+const ViewWord = ({ word, closeView, BookMarkCountRefresh }) => {
+    const change = () => {
+        Bookmark(word);
+        BookMarkCountRefresh();
+    }
     return (
         <div className="viewWord">
             <div className="word-header">
@@ -21,7 +25,7 @@ const ViewWord = ({ word, closeView }) => {
                 <div className="second-header-line">
                     <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
                     <div className="button-div">
-                        <button type="submit" onClick={() => Bookmark(word)}>
+                        <button type="submit" onClick={() => change()}>
                             <FontAwesomeIcon className="word-head-icon" icon={faBookmark} />
                         </button>
                         <button type="submit" onClick={() => Share(word[0].word)}>
