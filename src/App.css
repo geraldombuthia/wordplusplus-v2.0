@@ -129,6 +129,12 @@ button {
   flex-direction: row;
   justify-content: space-between;
 }
+.phonetic{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 8px;
+}
 .word-head > h2 {
   margin: 0.5em 0;
 }

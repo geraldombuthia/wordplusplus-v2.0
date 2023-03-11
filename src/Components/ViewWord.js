@@ -20,7 +20,6 @@ const ViewWord = ({ word, closeView }) => {
                 </div>
                 <div className="second-header-line">
                     <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
-
                     <div className="button-div">
                         <button type="submit" onClick={() => Bookmark(word)}>
                             <FontAwesomeIcon className="word-head-icon" icon={faBookmark} />
