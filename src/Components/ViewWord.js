@@ -20,22 +20,22 @@ const ViewWord = ({ word, closeView }) => {
                 </div>
                 <div className="second-header-line">
                     <p className="phonetic">{word[0].phonetic > 0 ? word[0].phonetic : "N/A"}</p>
-                    <button type="submit" onClick={() => Share(word[0].word)}>
-                        <FontAwesomeIcon className="word-head-icon" icon={faBookmark} onClick={() => Bookmark(word)} />
-                        <FontAwesomeIcon icon={faWhatsapp} className="word-head-icon" />
-                    </button>
+
+                    <div className="button-div">
+                        <button type="submit" onClick={() => Bookmark(word)}>
+                            <FontAwesomeIcon className="word-head-icon" icon={faBookmark} />
+                        </button>
+                        <button type="submit" onClick={() => Share(word[0].word)}>
+                            <FontAwesomeIcon icon={faWhatsapp} className="word-head-icon" />
+                        </button>
+                    </div>
+
                 </div>
             </div>
-            {/* <div classname="def-syn-ant">
-                <p className='lorem'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae, sunt tenetur atque, in repellendus explicabo, natus vel pariatur non consequuntur illum quaerat adipisci eligendi repudiandae aliquam. Quis, explicabo maiores.</p>
-                <h3>Defintions</h3>
-                <h3>Synonyms</h3>
-                <h3>Antonyms</h3>
-            </div> */}
             {word[0].meanings.map((meaning, index) => (
                 <>
                     {meaning.partOfSpeech &&
-                        <div className='partofspeech'>
+                        <div className='partofspeech' key={index}>
                             <h3 key={index} className="part-header">{meaning.partOfSpeech}</h3>
                             {meaning.definitions.map((definition, ind) => (
                                 <p key={ind} className="definition"><span>{ind + 1}. </span>{definition.definition}</p>

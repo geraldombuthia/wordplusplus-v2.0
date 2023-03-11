@@ -23,7 +23,6 @@ const Search = ({onSearch, showQuotes}) => {
     <form onSubmit = {onSubmit} action="" className="form">
         <input type="text" placeholder="Search" className='input' id='input' value={searchWord} onChange={(e) => setSearchWord(e.target.value)}/>
         <button type="submit"><FontAwesomeIcon icon={faSearch} /> <span className="display">Submit</span> </button>
-        
     </form>
   )
 }
