@@ -2,8 +2,9 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Home from "./Components/Home"
 import Bookmark from "./Components/BookMark"
-
+import BookMarkSearch from './Controllers/BookMarkSearch';
 import { Route, Routes } from "react-router-dom";
+
 function App() {
   const [word, setWord] = useState('');
   const [quotes, setQuotes] = useState('');
@@ -23,7 +24,7 @@ function App() {
       const data = await res.json();
       setQuotes(data);
     }
-    
+
     fetchQuote();
   }, [])
 
@@ -33,13 +34,14 @@ function App() {
     const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${toSearch}`);
     const data = await res.json();
     setWord(data);
-    if (data){
+    if (data) {
       setIsLoading(false)
     }
-    if(data.title){
+    if (data.title) {
       setIsError(true);
       console.log(data.title);
     }
+
   }
 
   const closeView = () => {
@@ -47,10 +49,10 @@ function App() {
     setShowQuotes(true);
   }
   //FetchWord Function Ends
-  return (  
+  return (
     <Routes>
-      <Route path = "/" element={<Home onSearch={onSearch} showQuotes = {showQuotes} word={word} closeView = {closeView} quotes={quotes} isLoading= {isLoading} isError={isError} />}/>
-      <Route path = "/Bookmark" element={<Bookmark />}/>
+      <Route path="/" element={<Home onSearch={onSearch} showQuotes={showQuotes} word={word} closeView={closeView} quotes={quotes} isLoading={isLoading} isError={isError} />} />
+      <Route path="/Bookmark" element={<Bookmark />} />
     </Routes>
   );
 }

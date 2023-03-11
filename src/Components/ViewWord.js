@@ -38,8 +38,8 @@ const ViewWord = ({ word, closeView, BookMarkCountRefresh }) => {
             {word[0].meanings.map((meaning, index) => (
                 <>
                     {meaning.partOfSpeech &&
-                        <div className='partofspeech' key={index}>
-                            <h3 key={index} className="part-header">{meaning.partOfSpeech}</h3>
+                        <div className='partofspeech' >
+                            <h3 className="part-header">{meaning.partOfSpeech}</h3>
                             {meaning.definitions.map((definition, ind) => (
                                 <p key={ind} className="definition"><span>{ind + 1}. </span>{definition.definition}</p>
                             ))}
