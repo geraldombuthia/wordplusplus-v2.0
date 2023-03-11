@@ -1,6 +1,6 @@
 Vieword page
 - Appropriately separate bookmark and whatsapp share button. FIXED.
-- Align the above two buttons with the phonetics
+- Align the above two buttons with the phonetics. FIXED.
 - Ensure number badge on bookmark icon changes as soon as number of bookmarked words changes
 - Add a way to indicate that a word is already bookmarked after Search
 - Find words from bookmark first before fetching

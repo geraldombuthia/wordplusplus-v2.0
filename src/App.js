@@ -12,6 +12,7 @@ function App() {
   const [isError, setIsError] = useState(false);
 
   const onSearch = async (toSearch) => {
+    setIsError(false);
     fetchWord(toSearch);
     setShowQuotes(false);
   }
