@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Home from "./Components/Home"
 import Bookmark from "./Components/BookMark"
+import BookMarkSearch from "./Controllers/BookMarkSearch"
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -42,16 +43,21 @@ function App() {
     }
 
   }
-
   const closeView = () => {
     setWord("");
     setShowQuotes(true);
   }
   //FetchWord Function Ends
+  const onBookMark = (bookMarkWord) => {
+    setIsError(false);
+    setWord(BookMarkSearch(bookMarkWord));
+    console.log(word);
+    setShowQuotes(false);
+  }
   return (
     <Routes>
       <Route path="/" element={<Home onSearch={onSearch} showQuotes={showQuotes} word={word} closeView={closeView} quotes={quotes} isLoading={isLoading} isError={isError} />} />
-      <Route path="/Bookmark" element={<Bookmark />} />
+      <Route path="/Bookmark" element={<Bookmark onBookMark={onBookMark}/>} />
     </Routes>
   );
 }
