@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import BookMarkItem from './BookMarkItem';
 import BookMarkEmpty from './BookMarkEmpty';
 
@@ -8,9 +7,7 @@ const BookMarkContents = ({onBookMark}) => {
   return (
     <>
       {keys.length > 0 ? keys.map((obj, index) =>
-        <Link to="/" className='link' onClick={() => onBookMark(obj)}>
-          <BookMarkItem obj={obj} key={index} />
-        </Link>
+          <BookMarkItem obj={obj} key={index} onBookMark= {onBookMark}/>
       ) : <BookMarkEmpty />}
     </>
   )
