@@ -16,7 +16,7 @@ const Search = ({onSearch, showQuotes}) => {
         if(searchWord){
             onSearch(searchWord)
         }
-        setSearchWord("");
+        
     }
     
   return (
