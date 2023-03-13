@@ -2,7 +2,7 @@ Vieword page
 - Appropriately separate bookmark and whatsapp share button. FIXED.
 - Align the above two buttons with the phonetics. FIXED.
 - Ensure number badge on bookmark icon changes as soon as number of bookmarked words changes. Attempted Fix failed.
-- Add a way to indicate that a word is already bookmarked after Search. 
+- Add a way to indicate that a word is already bookmarked after Search. GOES HAND IN HAND WITH THE NEXT POINT.
 - Find words from bookmark first before fetching. Attempted Fix failed. the Word state was not updated.
 
 *To be added*
@@ -11,3 +11,5 @@ Fix the SearchError Page Appropriately
 Add an Offline Page and Make the application downloadable.
 Introduce a service worker - Ideally to fetch quotes and supply a switch in the background.
 Improve platform performance by comparing it with the lighthouse metrics.
+Share words and have the link return that word on search.
+Share words in the Bookmark section.

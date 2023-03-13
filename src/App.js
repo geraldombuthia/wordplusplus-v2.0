@@ -51,7 +51,6 @@ function App() {
   const onBookMark = (bookMarkWord) => {
     setIsError(false);
     setWord(BookMarkSearch(bookMarkWord));
-    console.log(word);
     setShowQuotes(false);
   }
   return (

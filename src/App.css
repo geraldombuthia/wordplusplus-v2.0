@@ -13,12 +13,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
 .App {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
   padding: 0 2em;
+  max-width: 600px;
 }
 .nav {
   display: flex;
@@ -228,8 +236,14 @@ button {
   text-decoration: none;
   color: inherit;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .word-head-icon {
     font-size: 16px;
+  }
+  .App{
+    border: 1px solid grey;
+  }
+  .girlpic{
+    max-width: 400px;
   }
 }
