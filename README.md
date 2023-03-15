@@ -3,6 +3,8 @@
 This is an upgraded version of the first iteration of the Word++ Application.
 Uses a Public API to find words, provide their definitions, synonyms, antonyms, pronounciatons etc.
 
+This app is hosted on Netlify and can be accessed at [wordplusplus.netlify.app](https://wordplusplus.netlify.app)
+
 ## Objectives
 
 * Teach new vocabularies using **Word of the day** type of feature.
@@ -31,7 +33,7 @@ The above named functionalities will require a better state management  other th
 *Separation of concerns* as a principle will be utilised in the development. Modularization will be utilised in the form of components and separate function files. This is in the hope of improving readability and development.
 
 ## Optimization and testing
-The application is tested against Lighthouse application load metrics to ensure it is upto per wth requirements for a better user Experience. Optiizations were made to ensure the following results on Lighthouse.
+The application is tested against Lighthouse application load metrics to ensure it is upto per wth requirements for a better user Experience. Optiizations were made to ensure the following results on Lighthouse for mobile loading.
 
 ![Lighthouse scores](/LighthouseTest.png)
 
