@@ -27,6 +27,7 @@ body{
   height: 100vh;
   padding: 0 2em;
   max-width: 600px;
+  overflow:auto;
 }
 .nav {
   display: flex;
@@ -34,6 +35,10 @@ body{
   flex-direction: row;
   justify-content: space-between;
   font-size: 18px;
+  position: sticky;
+  width: 100%;
+  top:0;
+  background-color: var(--color6);
 }
 .nav > h1 {
   font-size: 24px;
