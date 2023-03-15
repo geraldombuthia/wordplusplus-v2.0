@@ -6,7 +6,6 @@ Vieword page
 - Find words from bookmark first before fetching. Attempted Fix failed. the Word state was not updated.
 
 *To be added*
-Have a history feed
 Fix the SearchError Page Appropriately
 Add an Offline Page and Make the application downloadable.
 Introduce a service worker - Ideally to fetch quotes and supply a switch in the background.
