@@ -18,7 +18,7 @@ const View = ({ word, closeView, isLoading, isError, BookMarkCountRefresh }) => 
       <div className="no-word">
         <p className="helper-text">Find new words, synonyms and antonyms</p>
         <LazyLoad height={200}>
-          <img src="/images/Girl Reading400.webp" alt="Girl reading a book" className="girlpic"/>
+          <img src="/images/Girl Reading.webp" alt="Girl reading a book" className="girlpic"/>
         </LazyLoad>
       </div>}
 
