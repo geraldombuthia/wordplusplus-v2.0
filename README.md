@@ -30,6 +30,13 @@ The above named functionalities will require a better state management  other th
 
 *Separation of concerns* as a principle will be utilised in the development. Modularization will be utilised in the form of components and separate function files. This is in the hope of improving readability and development.
 
+## Optimization and testing
+The application is tested against Lighthouse application load metrics to ensure it is upto per wth requirements for a better user Experience. Optiizations were made to ensure the following results on Lighthouse.
+
+![Lighthouse scores](/LighthouseTest.png)
+
+Improvements will be made to improve this reading.
+
 ## Third Party APIs and content
 
 The development of this project relies heavily on the following third party APIs. ...
