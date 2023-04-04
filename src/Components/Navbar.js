@@ -14,7 +14,7 @@ const Navbar = ({ text }) => {
       </div>
       <h1>{text}</h1>
       <div className="nav-icons">
-        {text === "Bookmark" ? " ": <Link to="/Bookmark" className="link">
+        {text === "Bookmark" || text === "About" ? " ": <Link to="/Bookmark" className="link">
           <FontAwesomeIcon icon={faBookmark} className="bookmark-icon"/>
           <span className="count">
           {BookMarkCount()}
