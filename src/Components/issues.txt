@@ -12,3 +12,4 @@ Introduce a service worker - Ideally to fetch quotes and supply a switch in the 
 Improve platform performance by comparing it with the lighthouse metrics.
 Share words and have the link return that word on search.
 Share words in the Bookmark section.
+Clean up the code and partition related files into subfolders 
