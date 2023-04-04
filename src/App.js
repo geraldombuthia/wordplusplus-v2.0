@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Home from "./Components/Home"
 import Bookmark from "./Components/BookMark"
 import BookMarkSearch from "./Controllers/BookMarkSearch"
+import About from "./Components/About"
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home onSearch={onSearch} showQuotes={showQuotes} word={word} closeView={closeView} quotes={quotes} isLoading={isLoading} isError={isError} />} />
+      <Route path="/About" element={<About/>} />
       <Route path="/Bookmark" element={<Bookmark onBookMark={onBookMark}/>} />
     </Routes>
   );

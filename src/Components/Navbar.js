@@ -10,7 +10,7 @@ const Navbar = ({ text }) => {
   return (
     <div className="nav">
       <div className="firstel">
-        {text === "Bookmark" ? <FontAwesomeIcon icon={faArrowLeftLong} onClick={() => navigate(-1)} /> : " "}
+        {text === "Bookmark" || text === "About" ? <FontAwesomeIcon icon={faArrowLeftLong} onClick={() => navigate(-1)} /> : " "}
       </div>
       <h1>{text}</h1>
       <div className="nav-icons">
