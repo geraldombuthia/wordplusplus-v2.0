@@ -274,6 +274,34 @@ button {
   background-color: white;
   z-index: 1;
 }
+.version{
+  align-self: center;
+  color: grey;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.about-header{
+  font-size: 18px;
+  padding: 10px 0;
+}
+.about-paragraph{
+  padding: 20px 0;
+}
+.developer-info{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items:center;
+  width: 150px;
+  height: 100px;
+  padding: 10px 0;
+}
+.developer-name{
+  font-size: 18px;
+}
+.developer-title{
+  font-size: 16px;
+}
 @media only screen and (min-width: 600px) {
   .word-head-icon {
     font-size: 16px;
