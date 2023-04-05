@@ -4,7 +4,7 @@ import Home from "./Components/Home"
 import Bookmark from "./Components/BookMark"
 import BookMarkSearch from "./Controllers/BookMarkSearch"
 import About from "./Components/About"
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useSearchParams } from "react-router-dom";
 
 function App() {
   const [word, setWord] = useState('');
@@ -12,6 +12,7 @@ function App() {
   const [showQuotes, setShowQuotes] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [isShared, setIsShared] = useState(false);
 
   const onSearch = async (toSearch) => {
     setIsError(false);
@@ -25,7 +26,6 @@ function App() {
       const data = await res.json();
       setQuotes(data);
     }
-
     fetchQuote();
   }, [])
 
@@ -54,9 +54,13 @@ function App() {
     setWord(BookMarkSearch(bookMarkWord));
     setShowQuotes(false);
   }
+  const onShared = (bool) => {
+    setIshared(bool);
+  }
   return (
     <Routes>
-      <Route path="/" element={<Home onSearch={onSearch} showQuotes={showQuotes} word={word} closeView={closeView} quotes={quotes} isLoading={isLoading} isError={isError} />} />
+      <Route path="/" element={<Home onSearch={onSearch} showQuotes={showQuotes} word={word} closeView={closeView} quotes={quotes} isLoading={isLoading} isError={isError} onShared={onShared}/>} />
+      <Route path="/Searched/:word" element={<Home onSearch={onSearch} showQuotes={showQuotes} word={word} closeView={closeView} quotes={quotes} isLoading={isLoading} isError={isError} onShared={onShared}/>} />
       <Route path="/About" element={<About/>} />
       <Route path="/Bookmark" element={<Bookmark onBookMark={onBookMark}/>} />
     </Routes>

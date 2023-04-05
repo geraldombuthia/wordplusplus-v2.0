@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
+import BottomNav from './BottomNav'
 const About = () => {
   return (
     <div className="App">
@@ -20,7 +21,8 @@ const About = () => {
         <p className="developer-title">Software Developer</p>
       </div>
       <h2 className="about-header">Repository</h2>
-        <p>You can find the repository <a href="https://github.com/geraldombuthia/wordplusplus-v2.0">here</a>>: </p>
+        <p>You can find the repository <a href="https://github.com/geraldombuthia/wordplusplus-v2.0">here</a> </p>
+      <BottomNav/>
     </div>
   )
 }
